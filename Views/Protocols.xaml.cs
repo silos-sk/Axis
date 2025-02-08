@@ -8,5 +8,9 @@ public partial class Protocols : ContentPage
 		InitializeComponent();
 	}
 
+	private void btnBackHomeClicked(object sender, EventArgs e)
+	{
+		Shell.Current.GoToAsync($"//{nameof(MainPage)}");
+	}
 }
 

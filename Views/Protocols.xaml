@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Axis.Views.Protocols"
              Title="Protocols">
-             
+    <ScrollView>
     <VerticalStackLayout Padding="30,0"
             Spacing="25">
         <Label
@@ -40,7 +40,14 @@
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="More information about the 3 Point Day Curve" />
         
+         <Button
+                x:Name="btnBackHomeClicked"
+                Text="Back Home" 
+                SemanticProperties.Hint="Go Back Home"
+                Clicked="btnBackHomeClicked"
+                HorizontalOptions="Fill" />
        
     </VerticalStackLayout>
+    </ScrollView>
 
 </ContentPage>
