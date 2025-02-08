@@ -1,4 +1,6 @@
-﻿namespace Axis;
+﻿using Axis.Views;
+
+namespace Axis;
 
 public partial class AppShell : Shell
 {

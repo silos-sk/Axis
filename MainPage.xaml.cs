@@ -1,8 +1,11 @@
-﻿namespace Axis;
+﻿using System.Security.Authentication;
+using ObjCRuntime;
+using Axis.Views;
+
+namespace Axis;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
 
 	public MainPage()
 	{
@@ -22,14 +25,17 @@ public partial class MainPage : ContentPage
 	// }
 	private void OnProtocolClicked(object sender, EventArgs e)
 	{
-		count++;
+		// count++;
 
-		if (count == 1)
-			ThreePt.Text = $"Clicked {count} time";
-		else
-			ThreePt.Text = $"Clicked {count} times";
+		// if (count == 1)
+		// 	ThreePt.Text = $"Clicked {count} time";
+		// else
+		// 	ThreePt.Text = $"Clicked {count} times";
 
-		SemanticScreenReader.Announce(ThreePt.Text);
+		// SemanticScreenReader.Announce(ThreePt.Text);
+
+		Shell.Current.GoToAsync(nameof(Protocols));
 	}
+
 }
 

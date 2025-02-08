@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Axis.Protocols">
+             x:Class="Axis.Views.Protocols"
+             Title="Protocols">
+             
+    <VerticalStackLayout Padding="30,0"
+            Spacing="25">
+        <Label
+            Text="Endocrine Protocols Library"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+           Style="{StaticResource Headline}">
+
+        </Label>
+
+        <Label
+                Text="3 Point Day Curve"
+                FontSize="Subtitle"
+                FontAttributes="Bold"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="More information about the 3 Point Day Curve" />
+        
+         <Label
+                Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem turpis, volutpat sit amet lorem eget, faucibus sagittis augue. Pellentesque vulputate tellus eu tortor pulvinar, non gravida elit dapibus. Nunc mattis nunc ut nunc lacinia, sit amet scelerisque erat ultricies. Nullam dignissim vehicula felis. Suspendisse congue eros nec arcu tristique, eget placerat magna volutpat. Sed eu mauris quis felis volutpat pharetra nec at velit. Duis imperdiet quam sed est pretium, et pulvinar leo fringilla. Maecenas molestie vulputate nibh imperdiet sollicitudin. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam nec diam lectus. Donec eget lobortis mauris. Integer consectetur sapien a mauris hendrerit, sed sollicitudin sem posuere."
+                FontSize="Body"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="More information about the 3 Point Day Curve" />
+        
+          <Label
+                Text="4 Point Day Curve"
+                FontSize="Subtitle"
+                FontAttributes="Bold"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="More information about the 4 Point Day Curve" />
+          
+            <Label
+                Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem turpis, volutpat sit amet lorem eget, faucibus sagittis augue. Pellentesque vulputate tellus eu tortor pulvinar, non gravida elit dapibus. Nunc mattis nunc ut nunc lacinia, sit amet scelerisque erat ultricies. Nullam dignissim vehicula felis. Suspendisse congue eros nec arcu tristique, eget placerat magna volutpat. Sed eu mauris quis felis volutpat pharetra nec at velit. Duis imperdiet quam sed est pretium, et pulvinar leo fringilla. Maecenas molestie vulputate nibh imperdiet sollicitudin. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam nec diam lectus. Donec eget lobortis mauris. Integer consectetur sapien a mauris hendrerit, sed sollicitudin sem posuere."
+                FontSize="Body"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="More information about the 3 Point Day Curve" />
+        
+       
+    </VerticalStackLayout>
 
 </ContentPage>
