@@ -79,10 +79,9 @@
                 <TextCell Text="{Binding Time}" Detail="{Binding Dose}"></TextCell> 
             </DataTemplate>
         </ListView.ItemTemplate>
-    </ListView>
+         </ListView>
 
-        
-
+       
           
         </VerticalStackLayout>
     </ScrollView>

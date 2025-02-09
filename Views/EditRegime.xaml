@@ -21,6 +21,12 @@
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="More information about the 3 Point Day Curve" />
         
+         <Label x:Name="lblTime">
+
+        </Label>
+        
+
+
          <Button
                 x:Name="btnBackHome"
                 Text="Back Home" 

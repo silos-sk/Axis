@@ -3,6 +3,8 @@ using ObjCRuntime;
 using Axis.Views;
 using Axis.Models;
 
+using Regime = Axis.Models.SteroidRegime;
+
 namespace Axis;
 
 public partial class MainPage : ContentPage
@@ -35,7 +37,7 @@ public partial class MainPage : ContentPage
 	{
 		if (listRegimes.SelectedItem != null)
 		{
-		await Shell.Current.GoToAsync(nameof(EditRegime));
+		await Shell.Current.GoToAsync($"{nameof(EditRegime)}?Id={((Regime)listRegimes.SelectedItem).RegimeId}");
 		}
 		
 	}
