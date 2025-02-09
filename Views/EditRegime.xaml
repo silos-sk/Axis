@@ -34,12 +34,7 @@
             SemanticProperties.Description="Edit dose" 
            />
 
-         <Button
-                x:Name="btnBackHome"
-                Text="Back Home" 
-                SemanticProperties.Hint="Go Back Home"
-                Clicked="btnBackHomeClicked"
-                HorizontalOptions="Fill" />
+      
         -->
 
 
@@ -51,7 +46,7 @@
                                        VerticalOptions="Center"
                                        WidthRequest="60"></Label>
 
-                                <TimePicker x:Name="TimePicker"
+                                <TimePicker x:Name="EntryTime"
                                             FontSize="Body"
                                             WidthRequest="200"
                                             Time="{Binding SelectedTime}"/>
@@ -64,7 +59,7 @@
                                        FontAttributes="Bold"
                                        VerticalOptions="Center"
                                        WidthRequest="60"></Label>
-                                <Entry VerticalOptions="Center" x:Name="Dose"
+                                <Entry VerticalOptions="Center" x:Name="EntryDose"
                                        WidthRequest="200"  FontSize="Body"></Entry>
                         </HorizontalStackLayout>
 
@@ -74,10 +69,32 @@
                                        FontAttributes="Bold"
                                        VerticalOptions="Center"
                                        WidthRequest="60"></Label>
-                                <Entry VerticalOptions="Center" x:Name="Period"
+                                <Entry VerticalOptions="Center" x:Name="EntryPeriod"
                                        WidthRequest="200"  FontSize="Body"></Entry>
                         </HorizontalStackLayout>
 
+                     <HorizontalStackLayout Spacing="5" HorizontalOptions="Center">
+                             <Button
+                                x:Name="btnSave"
+                                Text="Save" 
+                                WidthRequest="130"
+                                BackgroundColor="Green"
+                                FontSize="Body"
+                                SemanticProperties.Hint="Save"
+                                Clicked="btnSaveClicked"
+                                HorizontalOptions="Fill" />
+                            
+                            <Button
+                                x:Name="btnCancel"
+                                Text="Cancel" 
+                                FontSize="Body"
+                                BackgroundColor="Grey"
+                                SemanticProperties.Hint="Cancel"
+                                Clicked="btnCancelClicked"
+                                HorizontalOptions="Fill" />
+
+                     </HorizontalStackLayout>  
+                          
                 </VerticalStackLayout>
         </ScrollView>
 

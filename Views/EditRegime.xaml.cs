@@ -14,9 +14,14 @@ public partial class EditRegime: ContentPage
 		InitializeComponent();
 	}
 
-	private void btnBackHomeClicked(object sender, EventArgs e)
+	private void btnCancelClicked(object sender, EventArgs e)
 	{
 		Shell.Current.GoToAsync($"//{nameof(MainPage)}");
+	}
+
+	private void btnSaveClicked(object sender, EventArgs e)
+	{
+		// Shell.Current.GoToAsync($"//{nameof(MainPage)}");
 	}
 
 	public string RegimeId
@@ -24,10 +29,13 @@ public partial class EditRegime: ContentPage
 		set
 		{
 			Regime = RegimeRepository.GetRegimebyId(int.Parse(value));
-			TimePicker.Time = Regime.Time;
-			Dose.Text = Regime.Dose;
-			Period.Text = Regime.Period;
-
+			if (Regime !=null)
+			{
+				EntryTime.Time = Regime.Time;
+				EntryDose.Text = Regime.Dose;
+				EntryPeriod.Text = Regime.Period;
+			}
+			
 			// lblTime.Text = Regime.Time.ToString();
 			// lblDose.Text = Regime.Dose;
 			// lblPeriod.Text = Regime.Period;
