@@ -14,7 +14,7 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 
-		TimeSpan selectedTime = TimePicker.Time;
+		// TimeSpan selectedTime = TimePicker.Time;
 
 		List<SteroidRegime> Regimes = RegimeRepository.GetRegimes();
 		listRegimes.ItemsSource = Regimes;

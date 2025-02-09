@@ -7,82 +7,105 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            <Image
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Image
                 Source="dotnet_bot.png"
                 HeightRequest="50"
                 Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a hovercraft number nine" />
+                SemanticProperties.Description="dot net bot in a hovercraft number nine"/>
 
             <Label
                 Text="AXIS"
                 Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+                SemanticProperties.HeadingLevel="Level1" HorizontalOptions="Center"/>
+            
+            </HorizontalStackLayout>
             <!-- &#10; -->
             <Label
-                Text="Endocrine Testing Timer App"
+                Text="Test Timer App"
                 FontSize="Subtitle"
                 Margin="-20"
                 HorizontalOptions="Center"
                 SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Endocrine Testing App" />
-            
-             <Label
-                Text="Pick a Testing Protocol Below:"
+                SemanticProperties.Description="Endocrine Testing App"/>
+
+            <Label
+                Text="Pick a Protocol Below:"
                 FontSize="Body"
-                Margin="10"
+                Margin="0,20,0,-10"
                 HorizontalOptions="Center"
                 SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Pick a testing protocol" />
+                SemanticProperties.Description="Pick a testing protocol"/>
 
-            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+            <HorizontalStackLayout Spacing="10"
+                    HorizontalOptions="Center">
                 <Button
-                x:Name="ThreePt"
-                Text="3 point" 
-                FontSize="Body"
-                SemanticProperties.Hint="Generates blood test timing for a 3 point Day Curve"
-                Clicked="OnProtocolClicked"
-                HorizontalOptions="Fill"
-                HeightRequest="50"
-                WidthRequest="125" />
+                    x:Name="ThreePt"
+                    Text="3 point"
+                    FontSize="Body"
+                    SemanticProperties.Hint="Generates blood test timing for a 3 point Day Curve"
+                    Clicked="OnProtocolClicked"
+                    HorizontalOptions="Fill"
+                    HeightRequest="50"
+                    WidthRequest="125"/>
 
-             <Button
-                x:Name="FourPt"
-                Text="4 point" 
-                FontSize="Body"
-                SemanticProperties.Hint="Generates blood test timing for a 4 point Day Curve"
-                Clicked="OnProtocolClicked"
-                HorizontalOptions="Fill"
-                HeightRequest="50"
-                WidthRequest="125" />
+                <Button
+                    x:Name="FourPt"
+                    Text="4 point"
+                    FontSize="Body"
+                    SemanticProperties.Hint="Generates blood test timing for a 4 point Day Curve"
+                    Clicked="OnProtocolClicked"
+                    HorizontalOptions="Fill"
+                    HeightRequest="50"
+                    WidthRequest="125"/>
 
             </HorizontalStackLayout>
-             
-        
-         <Label Text="Steroid Regime"
-            FontSize="Subtitle"
-            ></Label>
 
-         <Label Text="Select time"
+            <Label 
+                Text="Patient Information"
+                FontSize="Subtitle"/>
+
+            <HorizontalStackLayout Spacing="3">
+                <Label Text="Name"
+                        VerticalOptions="Center" WidthRequest="80"></Label>
+                <Entry VerticalOptions="Center" WidthRequest="200"></Entry>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="5">
+                <Label Text="MRN"
+                        VerticalOptions="Center" WidthRequest="80"></Label>
+                <Entry VerticalOptions="Center" WidthRequest="200"></Entry>
+            </HorizontalStackLayout>
+
+             <HorizontalStackLayout Spacing="5">
+            <Label Text="Medication"
+                    VerticalOptions="Center" WidthRequest="80"></Label>
+            <Entry VerticalOptions="Center" WidthRequest="200"></Entry>
+             </HorizontalStackLayout>
+
+
+            <Label Text="Steroid Regime"
+                   FontSize="Subtitle" Margin="0,0,0,-20"></Label>
+
+            <!-- <Label Text="Select time"
             FontSize="Body"
             ></Label>
         <TimePicker x:Name="TimePicker" Time="{Binding SelectedTime}" />
-    
+     -->
+            <ListView
+                x:Name="listRegimes"
+                RowHeight="70"
+                ItemSelected="ListRegimes_ItemSelected"
+                ItemTapped="ListRegimes_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
 
-        <ListView
-        x:Name="listRegimes"
-        RowHeight="80"
-        ItemSelected="ListRegimes_ItemSelected"
-        ItemTapped="ListRegimes_ItemTapped">
-        <ListView.ItemTemplate>
-            <DataTemplate>
+                        <TextCell Text="{Binding Time}"
+                                Detail="{Binding Dose}"></TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
                 
-                <TextCell Text="{Binding Time}" Detail="{Binding Dose}"></TextCell> 
-            </DataTemplate>
-        </ListView.ItemTemplate>
-         </ListView>
-
-       
-          
         </VerticalStackLayout>
     </ScrollView>
 
