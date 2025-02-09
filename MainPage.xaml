@@ -19,7 +19,7 @@
                 SemanticProperties.HeadingLevel="Level1" />
             <!-- &#10; -->
             <Label
-                Text="An Endocrine Testing Timer App"
+                Text="Endocrine Testing Timer App"
                 FontSize="Subtitle"
                 Margin="-20"
                 HorizontalOptions="Center"
@@ -47,11 +47,25 @@
                 SemanticProperties.Hint="Generates blood test timing for a 4 point Day Curve"
                 Clicked="OnProtocolClicked"
                 HorizontalOptions="Fill" />
+        
+         <Label Text="Steroid Regime"
+            FontSize="Subtitle"
+            ></Label>
+
+         <Label Text="Select time"
+            FontSize="Body"
+            ></Label>
+        <TimePicker x:Name="TimePicker" Time="{Binding SelectedTime}" />
+    
 
         <ListView
-            x:Name="listRegimes">
+            x:Name="listRegimes"
+            RowHeight="80"
+            ItemSelected="ListRegimes_ItemSelected"
+            ItemTapped="ListRegimes_ItemTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>
+                   
                     <TextCell Text="{Binding Time}" Detail="{Binding Dose}"></TextCell> 
                 </DataTemplate>
             </ListView.ItemTemplate>

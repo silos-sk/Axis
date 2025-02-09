@@ -2,6 +2,7 @@
 using ObjCRuntime;
 using Axis.Views;
 using Axis;
+using Axis.Models;
 
 namespace Axis;
 
@@ -12,13 +13,9 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 
-		List<SteroidRegime> Regimes=
-        [
-            new SteroidRegime { Time="8:00", Dose="20" },
-			new SteroidRegime { Time="12:00", Dose="10" },
-			new SteroidRegime { Time="17:00", Dose="10" },
-		];
+		TimeSpan selectedTime = TimePicker.Time;
 
+		List<SteroidRegime> Regimes = RegimeRepository.GetRegimes();
 		listRegimes.ItemsSource = Regimes;
 	}
 
@@ -35,10 +32,25 @@ public partial class MainPage : ContentPage
         public string? Medication { get; set; }
     }
 
-    public class SteroidRegime
+    // public class SteroidRegime
+    // {
+    //     public TimeSpan Time { get; set; }
+    //     public string? Dose { get; set; }
+    // }
+
+	public void ListRegimes_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+	{
+		if (listRegimes.SelectedItem != null)
+		{
+
+		DisplayAlert("test", "test", "OK");
+		}
+		
+	}
+
+    private void ListRegimes_ItemTapped(object sender, ItemTappedEventArgs e)
     {
-        public string? Time { get; set; }
-        public string? Dose { get; set; }
+		listRegimes.SelectedItem = null;
     }
 
 }
