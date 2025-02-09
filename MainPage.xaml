@@ -34,19 +34,29 @@
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Pick a testing protocol" />
 
-             <Button
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button
                 x:Name="ThreePt"
                 Text="3 point" 
+                FontSize="Body"
                 SemanticProperties.Hint="Generates blood test timing for a 3 point Day Curve"
                 Clicked="OnProtocolClicked"
-                HorizontalOptions="Fill" />
+                HorizontalOptions="Fill"
+                HeightRequest="50"
+                WidthRequest="125" />
 
              <Button
                 x:Name="FourPt"
                 Text="4 point" 
+                FontSize="Body"
                 SemanticProperties.Hint="Generates blood test timing for a 4 point Day Curve"
                 Clicked="OnProtocolClicked"
-                HorizontalOptions="Fill" />
+                HorizontalOptions="Fill"
+                HeightRequest="50"
+                WidthRequest="125" />
+
+            </HorizontalStackLayout>
+             
         
          <Label Text="Steroid Regime"
             FontSize="Subtitle"
@@ -59,17 +69,19 @@
     
 
         <ListView
-            x:Name="listRegimes"
-            RowHeight="80"
-            ItemSelected="ListRegimes_ItemSelected"
-            ItemTapped="ListRegimes_ItemTapped">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                   
-                    <TextCell Text="{Binding Time}" Detail="{Binding Dose}"></TextCell> 
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        x:Name="listRegimes"
+        RowHeight="80"
+        ItemSelected="ListRegimes_ItemSelected"
+        ItemTapped="ListRegimes_ItemTapped">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                
+                <TextCell Text="{Binding Time}" Detail="{Binding Dose}"></TextCell> 
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+        
 
           
         </VerticalStackLayout>
