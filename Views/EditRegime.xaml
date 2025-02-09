@@ -5,8 +5,9 @@
              Title="Edit Regime">
     <ScrollView>
     <VerticalStackLayout Padding="30,0"
-            Spacing="25">
-        <Label
+            Spacing="25" HorizontalOptions="Center">
+        
+        <!-- <Label
             x:Name="lblPeriod"
             VerticalOptions="Center"
             HorizontalOptions="Center"
@@ -38,7 +39,32 @@
                 SemanticProperties.Hint="Go Back Home"
                 Clicked="btnBackHomeClicked"
                 HorizontalOptions="Fill" />
-       
+        -->
+
+
+         <HorizontalStackLayout Spacing="3" Margin="0,20,0,0">
+                <Label Text="Time"
+                        FontSize="Body"
+                        VerticalOptions="Center" WidthRequest="60"></Label>
+
+                <TimePicker x:Name="TimePicker" WidthRequest="200" Time="{Binding SelectedTime}" />
+
+        </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="5">
+                <Label Text="Dose"
+                         FontSize="Body"
+                        VerticalOptions="Center" WidthRequest="60"></Label>
+                <Entry VerticalOptions="Center" WidthRequest="200"></Entry>
+            </HorizontalStackLayout>
+
+             <HorizontalStackLayout Spacing="5">
+            <Label Text="Period"
+                 FontSize="Body"
+                    VerticalOptions="Center" WidthRequest="60"></Label>
+            <Entry VerticalOptions="Center" WidthRequest="200"></Entry>
+             </HorizontalStackLayout>
+
     </VerticalStackLayout>
     </ScrollView>
 

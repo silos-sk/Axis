@@ -11,11 +11,13 @@
                 <Image
                 Source="dotnet_bot.png"
                 HeightRequest="50"
+                WidthRequest="60"
                 Aspect="AspectFit"
                 SemanticProperties.Description="dot net bot in a hovercraft number nine"/>
 
             <Label
                 Text="AXIS"
+                FontSize="50"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" HorizontalOptions="Center"/>
             
@@ -60,8 +62,8 @@
                     WidthRequest="125"/>
 
             </HorizontalStackLayout>
-
-            <Label 
+            
+            <!-- <Label 
                 Text="Patient Information"
                 FontSize="Subtitle"/>
 
@@ -81,17 +83,13 @@
             <Label Text="Medication"
                     VerticalOptions="Center" WidthRequest="80"></Label>
             <Entry VerticalOptions="Center" WidthRequest="200"></Entry>
-             </HorizontalStackLayout>
+             </HorizontalStackLayout> -->
 
 
             <Label Text="Steroid Regime"
                    FontSize="Subtitle" Margin="0,0,0,-20"></Label>
 
-            <!-- <Label Text="Select time"
-            FontSize="Body"
-            ></Label>
-        <TimePicker x:Name="TimePicker" Time="{Binding SelectedTime}" />
-     -->
+         
             <ListView
                 x:Name="listRegimes"
                 RowHeight="70"
