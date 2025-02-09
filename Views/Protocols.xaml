@@ -41,7 +41,7 @@
                 SemanticProperties.Description="More information about the 3 Point Day Curve" />
         
          <Button
-                x:Name="btnBackHomeClicked"
+                x:Name="btnBackHome"
                 Text="Back Home" 
                 SemanticProperties.Hint="Go Back Home"
                 Clicked="btnBackHomeClicked"
