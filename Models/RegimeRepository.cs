@@ -12,9 +12,9 @@ namespace Axis.Models
 
         public static List<SteroidRegime> _Regimes =
     [
-        new SteroidRegime { RegimeId = 1, Time=new TimeSpan(8, 00, 00), Dose="20 mg" },
-        new SteroidRegime { RegimeId = 2, Time=new TimeSpan(12, 00, 00), Dose="10 mg" },
-        new SteroidRegime { RegimeId = 3, Time=new TimeSpan(17, 00, 00), Dose="10 mg" },
+        new SteroidRegime { RegimeId = 1, Time=new TimeSpan(8, 00, 00), Dose="20 mg", Period="AM" },
+        new SteroidRegime { RegimeId = 2, Time=new TimeSpan(12, 00, 00), Dose="10 mg", Period="NN" },
+        new SteroidRegime { RegimeId = 3, Time=new TimeSpan(17, 00, 00), Dose="10 mg", Period="PM" },
     ];
 
     public static List<SteroidRegime> GetRegimes() => _Regimes;

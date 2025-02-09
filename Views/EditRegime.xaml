@@ -2,30 +2,35 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Axis.Views.EditRegime"
-             Title="EditRegime">
+             Title="Edit Regime">
     <ScrollView>
     <VerticalStackLayout Padding="30,0"
             Spacing="25">
         <Label
-            Text="Edit Regime"
+            x:Name="lblPeriod"
             VerticalOptions="Center"
             HorizontalOptions="Center"
            Style="{StaticResource Headline}">
 
         </Label>
 
-        <Label
-                Text="3 Point Day Curve"
-                FontSize="Subtitle"
-                FontAttributes="Bold"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="More information about the 3 Point Day Curve" />
-        
-         <Label x:Name="lblTime">
+         <Label 
+            x:Name="lblTime"
+            FontSize="Large"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            SemanticProperties.HeadingLevel="Level2"
+            SemanticProperties.Description="Edit time" 
+           />
 
-        </Label>
-        
-
+           <Label 
+            x:Name="lblDose"
+            FontSize="Subtitle"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            SemanticProperties.HeadingLevel="Level2"
+            SemanticProperties.Description="Edit dose" 
+           />
 
          <Button
                 x:Name="btnBackHome"
