@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Axis.Views.EditRegime"
+             Title="EditRegime">
+    <ScrollView>
+    <VerticalStackLayout Padding="30,0"
+            Spacing="25">
+        <Label
+            Text="Edit Regime"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+           Style="{StaticResource Headline}">
+
+        </Label>
+
+        <Label
+                Text="3 Point Day Curve"
+                FontSize="Subtitle"
+                FontAttributes="Bold"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="More information about the 3 Point Day Curve" />
+        
+         <Button
+                x:Name="btnBackHome"
+                Text="Back Home" 
+                SemanticProperties.Hint="Go Back Home"
+                Clicked="btnBackHomeClicked"
+                HorizontalOptions="Fill" />
+       
+    </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

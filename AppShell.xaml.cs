@@ -9,5 +9,6 @@ public partial class AppShell : Shell
 		InitializeComponent();
 
 		Routing.RegisterRoute(nameof(Protocols), typeof(Protocols));
+		Routing.RegisterRoute(nameof(EditRegime), typeof(EditRegime));
 	}
 }

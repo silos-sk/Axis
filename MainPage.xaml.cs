@@ -1,7 +1,6 @@
 ﻿using System.Security.Authentication;
 using ObjCRuntime;
 using Axis.Views;
-using Axis;
 using Axis.Models;
 
 namespace Axis;
@@ -32,18 +31,11 @@ public partial class MainPage : ContentPage
         public string? Medication { get; set; }
     }
 
-    // public class SteroidRegime
-    // {
-    //     public TimeSpan Time { get; set; }
-    //     public string? Dose { get; set; }
-    // }
-
-	public void ListRegimes_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+	public async void ListRegimes_ItemSelected(object sender, SelectedItemChangedEventArgs e)
 	{
 		if (listRegimes.SelectedItem != null)
 		{
-
-		DisplayAlert("test", "test", "OK");
+		await Shell.Current.GoToAsync(nameof(EditRegime));
 		}
 		
 	}
