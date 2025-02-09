@@ -19,9 +19,13 @@ public partial class EditRegime: ContentPage
 		Shell.Current.GoToAsync($"//{nameof(MainPage)}");
 	}
 
-	private void btnSaveClicked(object sender, EventArgs e)
+	private void btnUpdateClicked(object sender, EventArgs e)
 	{
-		// Shell.Current.GoToAsync($"//{nameof(MainPage)}");
+		Regime.Time = EntryTime.Time;
+		Regime.Dose = EntryDose.Text;
+		Regime.Period = EntryPeriod.Text;
+		RegimeRepository.UpdateRegime(Regime.RegimeId, Regime);
+		Shell.Current.GoToAsync("..");
 	}
 
 	public string RegimeId

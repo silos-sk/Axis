@@ -75,13 +75,13 @@
 
                      <HorizontalStackLayout Spacing="5" HorizontalOptions="Center">
                              <Button
-                                x:Name="btnSave"
-                                Text="Save" 
-                                WidthRequest="130"
+                                x:Name="btUpdate"
+                                Text="Update" 
+                                WidthRequest="180"
                                 BackgroundColor="Green"
                                 FontSize="Body"
-                                SemanticProperties.Hint="Save"
-                                Clicked="btnSaveClicked"
+                                SemanticProperties.Hint="Update"
+                                Clicked="btnUpdateClicked"
                                 HorizontalOptions="Fill" />
                             
                             <Button

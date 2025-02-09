@@ -27,5 +27,18 @@ namespace Axis.Models
 
         }
 
+    public static void UpdateRegime(int RegimeId, SteroidRegime regime)
+    {
+        if (RegimeId != regime.RegimeId) return;
+        
+        var RegimeToUpdate = GetRegimebyId(RegimeId);
+        if (RegimeToUpdate != null)
+        {
+            RegimeToUpdate.Time = regime.Time;
+            RegimeToUpdate.Dose = regime.Dose;
+            RegimeToUpdate.Period = regime.Period;
+        }
+
+}
 }
 }
