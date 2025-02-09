@@ -24,7 +24,7 @@
                 Margin="-20"
                 HorizontalOptions="Center"
                 SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+                SemanticProperties.Description="Endocrine Testing App" />
             
              <Label
                 Text="Pick a Testing Protocol Below:"
@@ -32,14 +32,7 @@
                 Margin="10"
                 HorizontalOptions="Center"
                 SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
-
-            <!-- <Button
-                x:Name="CounterBtn"
-                Text="Click me" 
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" /> -->
+                SemanticProperties.Description="Pick a testing protocol" />
 
              <Button
                 x:Name="ThreePt"
@@ -54,6 +47,8 @@
                 SemanticProperties.Hint="Generates blood test timing for a 4 point Day Curve"
                 Clicked="OnProtocolClicked"
                 HorizontalOptions="Fill" />
+
+          
         </VerticalStackLayout>
     </ScrollView>
 
