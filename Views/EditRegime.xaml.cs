@@ -24,6 +24,10 @@ public partial class EditRegime: ContentPage
 		set
 		{
 			Regime = RegimeRepository.GetRegimebyId(int.Parse(value));
+			TimePicker.Time = Regime.Time;
+			Dose.Text = Regime.Dose;
+			Period.Text = Regime.Period;
+
 			// lblTime.Text = Regime.Time.ToString();
 			// lblDose.Text = Regime.Dose;
 			// lblPeriod.Text = Regime.Period;
