@@ -48,6 +48,15 @@
                 Clicked="OnProtocolClicked"
                 HorizontalOptions="Fill" />
 
+        <ListView
+            x:Name="listRegimes">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Time}" Detail="{Binding Dose}"></TextCell> 
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
           
         </VerticalStackLayout>
     </ScrollView>
