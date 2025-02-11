@@ -13,7 +13,7 @@ namespace Axis.Models
     public TimeSpan Time { get; set; }
     public string? Dose { get; set; }
 
-    public string? Period { get; set; }
+    public TimeSpan TestTime { get; set; }
 
 
 }

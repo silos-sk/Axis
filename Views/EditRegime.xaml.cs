@@ -23,7 +23,7 @@ public partial class EditRegime: ContentPage
 	{
 		Regime.Time = EntryTime.Time;
 		Regime.Dose = EntryDose.Text;
-		Regime.Period = EntryPeriod.Text;
+		Regime.TestTime = EntryTestTime.Time;
 		RegimeRepository.UpdateRegime(Regime.RegimeId, Regime);
 		Shell.Current.GoToAsync("..");
 	}
@@ -37,7 +37,7 @@ public partial class EditRegime: ContentPage
 			{
 				EntryTime.Time = Regime.Time;
 				EntryDose.Text = Regime.Dose;
-				EntryPeriod.Text = Regime.Period;
+				EntryTestTime.Time = Regime.TestTime;
 			}
 			
 			// lblTime.Text = Regime.Time.ToString();

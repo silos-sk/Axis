@@ -4,6 +4,7 @@ using Axis.Views;
 using Axis.Models;
 
 using Regime = Axis.Models.SteroidRegime;
+using System.Collections.ObjectModel;
 
 namespace Axis;
 
@@ -15,12 +16,17 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 
 		// TimeSpan selectedTime = TimePicker.Time;
-
-		List<SteroidRegime> Regimes = RegimeRepository.GetRegimes();
-		listRegimes.ItemsSource = Regimes;
 	}
 
-	private void OnProtocolClicked(object sender, EventArgs e)
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+		var Regimes = new ObservableCollection<SteroidRegime>(RegimeRepository.GetRegimes());
+		listRegimes.ItemsSource = Regimes;
+    }
+
+    private void OnProtocolClicked(object sender, EventArgs e)
 	{
 
 		Shell.Current.GoToAsync(nameof(Protocols));

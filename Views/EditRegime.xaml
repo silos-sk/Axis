@@ -44,7 +44,7 @@
                                        FontSize="Body"
                                        FontAttributes="Bold"
                                        VerticalOptions="Center"
-                                       WidthRequest="60"></Label>
+                                       WidthRequest="80"></Label>
 
                                 <TimePicker x:Name="EntryTime"
                                             FontSize="Body"
@@ -58,20 +58,26 @@
                                        FontSize="Body"
                                        FontAttributes="Bold"
                                        VerticalOptions="Center"
-                                       WidthRequest="60"></Label>
+                                       WidthRequest="80"></Label>
                                 <Entry VerticalOptions="Center" x:Name="EntryDose"
                                        WidthRequest="200"  FontSize="Body"></Entry>
                         </HorizontalStackLayout>
 
-                        <HorizontalStackLayout Spacing="5">
-                                <Label Text="Period"
+                          <HorizontalStackLayout Spacing="3"
+                                               Margin="0,20,0,0">
+                                <Label Text="Test Time"
                                        FontSize="Body"
                                        FontAttributes="Bold"
                                        VerticalOptions="Center"
-                                       WidthRequest="60"></Label>
-                                <Entry VerticalOptions="Center" x:Name="EntryPeriod"
-                                       WidthRequest="200"  FontSize="Body"></Entry>
+                                       WidthRequest="80"></Label>
+
+                                <TimePicker x:Name="EntryTestTime"
+                                            FontSize="Body"
+                                            WidthRequest="200"
+                                            Time="{Binding SelectedTestTime}"/>
+
                         </HorizontalStackLayout>
+
 
                      <HorizontalStackLayout Spacing="5" HorizontalOptions="Center">
                              <Button
