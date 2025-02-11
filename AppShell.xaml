@@ -13,4 +13,9 @@
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
+     <ShellContent
+        Title="Protocols"
+        ContentTemplate="{DataTemplate views:Protocols}"
+        Route="Protocols" />
+
 </Shell>
