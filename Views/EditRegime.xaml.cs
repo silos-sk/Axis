@@ -21,6 +21,12 @@ public partial class EditRegime: ContentPage
 
 	private void btnUpdateClicked(object sender, EventArgs e)
 	{
+
+		if(EntryTimeValidator.IsNotValid)
+		{
+			DisplayAlert("Error", "Time is required.", "OK");
+			return;
+		}
 		Regime.Time = EntryTime.Time;
 		Regime.Dose = EntryDose.Text;
 		Regime.TestTime = EntryTestTime.Time;

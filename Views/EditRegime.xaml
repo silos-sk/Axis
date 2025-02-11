@@ -1,107 +1,93 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="Axis.Views.EditRegime"
              Title="Edit Regime">
-        <ScrollView>
-                <VerticalStackLayout Padding="30,0"
-                                     Spacing="25"
-                                     HorizontalOptions="Center">
+       <ScrollView>
+              <VerticalStackLayout Padding="30,0"
+                                   Spacing="25"
+                                   HorizontalOptions="Center">
 
-                        <!-- <Label
-            x:Name="lblPeriod"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
-           Style="{StaticResource Headline}">
+                     <HorizontalStackLayout Spacing="3"
+                                            Margin="0,20,0,0">
+                            <Label Text="Time"
+                                   FontSize="Body"
+                                   FontAttributes="Bold"
+                                   VerticalOptions="Center"
+                                   WidthRequest="80"></Label>
 
-        </Label>
+                            <TimePicker x:Name="EntryTime"
+                                        FontSize="Body"
+                                        WidthRequest="200"
+                                        Time="{Binding SelectedTime}">
+                                        
+                                        <TimePicker.Behaviors>
+                                          <toolkit:TextValidationBehavior 
+                                                 x:Name="EntryTimeValidator"
+                                                 Flags="ValidateOnAttaching,ValidateOnValueChanged"
+                                                 MinimumLength="1"
+                                                 />
+                                        </TimePicker.Behaviors>
+                                        
+                                        </TimePicker>
 
-         <Label 
-            x:Name="lblTime"
-            FontSize="Large"
-            FontAttributes="Bold"
-            HorizontalOptions="Center"
-            SemanticProperties.HeadingLevel="Level2"
-            SemanticProperties.Description="Edit time" 
-           />
+                           
 
-           <Label 
-            x:Name="lblDose"
-            FontSize="Subtitle"
-            FontAttributes="Bold"
-            HorizontalOptions="Center"
-            SemanticProperties.HeadingLevel="Level2"
-            SemanticProperties.Description="Edit dose" 
-           />
+                     </HorizontalStackLayout>
 
-      
-        -->
+                     <HorizontalStackLayout Spacing="5">
+                            <Label Text="Dose"
+                                   FontSize="Body"
+                                   FontAttributes="Bold"
+                                   VerticalOptions="Center"
+                                   WidthRequest="80"></Label>
+                            <Entry VerticalOptions="Center"
+                                          x:Name="EntryDose"
+                                   WidthRequest="200"
+                                          FontSize="Body"></Entry>
+                     </HorizontalStackLayout>
 
+                     <HorizontalStackLayout Spacing="3"
+                                            Margin="0,20,0,0">
+                            <Label Text="Test Time"
+                                   FontSize="Body"
+                                   FontAttributes="Bold"
+                                   VerticalOptions="Center"
+                                   WidthRequest="80"></Label>
 
-                        <HorizontalStackLayout Spacing="3"
-                                               Margin="0,20,0,0">
-                                <Label Text="Time"
-                                       FontSize="Body"
-                                       FontAttributes="Bold"
-                                       VerticalOptions="Center"
-                                       WidthRequest="80"></Label>
+                            <TimePicker x:Name="EntryTestTime"
+                                        FontSize="Body"
+                                        WidthRequest="200"
+                                        Time="{Binding SelectedTestTime}"/>
 
-                                <TimePicker x:Name="EntryTime"
-                                            FontSize="Body"
-                                            WidthRequest="200"
-                                            Time="{Binding SelectedTime}"/>
-
-                        </HorizontalStackLayout>
-
-                        <HorizontalStackLayout Spacing="5">
-                                <Label Text="Dose"
-                                       FontSize="Body"
-                                       FontAttributes="Bold"
-                                       VerticalOptions="Center"
-                                       WidthRequest="80"></Label>
-                                <Entry VerticalOptions="Center" x:Name="EntryDose"
-                                       WidthRequest="200"  FontSize="Body"></Entry>
-                        </HorizontalStackLayout>
-
-                          <HorizontalStackLayout Spacing="3"
-                                               Margin="0,20,0,0">
-                                <Label Text="Test Time"
-                                       FontSize="Body"
-                                       FontAttributes="Bold"
-                                       VerticalOptions="Center"
-                                       WidthRequest="80"></Label>
-
-                                <TimePicker x:Name="EntryTestTime"
-                                            FontSize="Body"
-                                            WidthRequest="200"
-                                            Time="{Binding SelectedTestTime}"/>
-
-                        </HorizontalStackLayout>
+                     </HorizontalStackLayout>
 
 
-                     <HorizontalStackLayout Spacing="5" HorizontalOptions="Center">
-                             <Button
-                                x:Name="btUpdate"
-                                Text="Update" 
-                                WidthRequest="180"
-                                BackgroundColor="Green"
-                                FontSize="Body"
-                                SemanticProperties.Hint="Update"
-                                Clicked="btnUpdateClicked"
-                                HorizontalOptions="Fill" />
-                            
+                     <HorizontalStackLayout Spacing="5"
+                                   HorizontalOptions="Center">
                             <Button
-                                x:Name="btnCancel"
-                                Text="Cancel" 
-                                FontSize="Body"
-                                BackgroundColor="Grey"
-                                SemanticProperties.Hint="Cancel"
-                                Clicked="btnCancelClicked"
-                                HorizontalOptions="Fill" />
+                                   x:Name="btUpdate"
+                                   Text="Update"
+                                   WidthRequest="180"
+                                   BackgroundColor="Green"
+                                   FontSize="Body"
+                                   SemanticProperties.Hint="Update"
+                                   Clicked="btnUpdateClicked"
+                                   HorizontalOptions="Fill"/>
 
-                     </HorizontalStackLayout>  
-                          
-                </VerticalStackLayout>
-        </ScrollView>
+                            <Button
+                                   x:Name="btnCancel"
+                                   Text="Cancel"
+                                   FontSize="Body"
+                                   BackgroundColor="Grey"
+                                   SemanticProperties.Hint="Cancel"
+                                   Clicked="btnCancelClicked"
+                                   HorizontalOptions="Fill"/>
+
+                     </HorizontalStackLayout>
+
+              </VerticalStackLayout>
+       </ScrollView>
 
 </ContentPage>
