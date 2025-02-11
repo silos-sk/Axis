@@ -22,7 +22,15 @@
                 SemanticProperties.Description="More information about the 3 Point Day Curve" />
         
          <Label
-                Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem turpis, volutpat sit amet lorem eget, faucibus sagittis augue. Pellentesque vulputate tellus eu tortor pulvinar, non gravida elit dapibus. Nunc mattis nunc ut nunc lacinia, sit amet scelerisque erat ultricies. Nullam dignissim vehicula felis. Suspendisse congue eros nec arcu tristique, eget placerat magna volutpat. Sed eu mauris quis felis volutpat pharetra nec at velit. Duis imperdiet quam sed est pretium, et pulvinar leo fringilla. Maecenas molestie vulputate nibh imperdiet sollicitudin. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam nec diam lectus. Donec eget lobortis mauris. Integer consectetur sapien a mauris hendrerit, sed sollicitudin sem posuere."
+                Text="Purpose: when ACTH/cortisol deficiency is established&#10;&#10;Pt prep:&#10;Stop oral oestrogen 6 weeks prior to the test. (Check other contraceptive measures being taken if premenopausal).&#10;&#10;Pt to take first dose in morning then come to appt
+
+&#10;&#10;Steps:&#10;1. Cannulate patient. &#10;2. Take bloods at timings below:&#10;&#10;
+- Peak: at least 1h after morning dose&#10;
+- Trough: 5min right before second dose (usually lunch time)&#10;
+- Trough: 5 min right before third dose &#10;&#10;Interpretation:&#10;Basal (pre-hydrocrotisone): normal (280-650 nmol/L) though suggested values 500-650 nmol/L&#10;&#10;
+-if basal less than 25 nmol/L, this means there is no adrenal cortisol production;&#10;&#10;Pre-dose (nadir) cortisol >50nmol/L to avoid marked under replacement&#10;&#10;And suggested 200 nmol/L to avoid over replacement&#10;&#10;
+Normal: 50-200 nmol/L.
+"
                 FontSize="Body"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="More information about the 3 Point Day Curve" />
@@ -35,7 +43,14 @@
                 SemanticProperties.Description="More information about the 4 Point Day Curve" />
           
             <Label
-                Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem turpis, volutpat sit amet lorem eget, faucibus sagittis augue. Pellentesque vulputate tellus eu tortor pulvinar, non gravida elit dapibus. Nunc mattis nunc ut nunc lacinia, sit amet scelerisque erat ultricies. Nullam dignissim vehicula felis. Suspendisse congue eros nec arcu tristique, eget placerat magna volutpat. Sed eu mauris quis felis volutpat pharetra nec at velit. Duis imperdiet quam sed est pretium, et pulvinar leo fringilla. Maecenas molestie vulputate nibh imperdiet sollicitudin. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam nec diam lectus. Donec eget lobortis mauris. Integer consectetur sapien a mauris hendrerit, sed sollicitudin sem posuere."
+               Text="Purpose: If there is a possibility of endogenous ACTH/cortisol production then a 4 point day curve can give useful information, i.e. the pre-hydrocortisone sample&#10;&#10;Pt prep:&#10;Pt NOT to take morning dose yet
+
+&#10;&#10;Steps:&#10;1. Cannulate patient. &#10;2. Take bloods at timings below:&#10;&#10;
+- Trough: before first dose;&#10;
+- Peak: at least 1h after morning dose&#10;
+- Trough: 5min right before second dose (usually lunch time)&#10;
+- Trough: 5 min right before third dose &#10;&#10;Interpretation:&#10;As above (3 point Day Curve)
+"
                 FontSize="Body"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="More information about the 3 Point Day Curve" />
