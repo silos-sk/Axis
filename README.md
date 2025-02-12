@@ -24,5 +24,5 @@ VS Code
 # Future Work
 
 - Add original idea of setting alarm notification for each test timing
-- Add more testing protocols
+- Enable adding more testing regimes and protocols
 - Enhance app UI 
