@@ -22,13 +22,13 @@
                                         WidthRequest="200"
                                         Time="{Binding SelectedTime}">
                                         
-                                        <TimePicker.Behaviors>
+                                        <!-- <TimePicker.Behaviors>
                                           <toolkit:TextValidationBehavior 
                                                  x:Name="EntryTimeValidator"
                                                  Flags="ValidateOnAttaching,ValidateOnValueChanged"
                                                  MinimumLength="1"
                                                  />
-                                        </TimePicker.Behaviors>
+                                        </TimePicker.Behaviors> -->
                                         
                                         </TimePicker>
 
