@@ -10,7 +10,7 @@ This is a .NET MAUI mobile app that displays a template time for the Steroid Day
 - Additional requirement: Incorporate two or more screens
 
 ## Demo Video
-Video walkthrough inluded in Canvas submission
+https://youtu.be/biJZH5QQ5p4?si=9eKnwfqQiwrD0lS_
 
 # Development Environment
 .NET MAUI 
